@@ -1,22 +1,20 @@
-import {compose, lifecycle} from 'recompose';
-import {connect} from 'react-redux';
-import RootNavigator from './navigation/RootNavigator';
-import {getLocation} from './actions/location';
+/*
+ * @Author: Joel Etten
+ * @Date: 2018-10-14 19:07:33
+ * @Last Modified by: joel-etten
+ * @Last Modified time: 2018-10-14 22:26:48
+ */
+import React from 'react'
+import {View} from 'react-native'
 
+import Header from './components/Header/Header.container'
+import BalanceSummary from './components/BalanceSummary/BalanceSummary.container'
+import StockList from './components/StockList/StockList.container'
 
-const mapStateToProps = () => ({
+const RootContainer = () => (
+  <View>
+    <Header />
+  </View>
+)
 
-})
-
-const mapDispatchToProps = (dispatch) => ({
-  getCurrentPosition: () => dispatch(getLocation()),
-})
-
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
-  lifecycle({
-    componentDidMount() {
-      this.props.getCurrentPosition()
-    },
-  }),
-)(RootNavigator)
+export default RootContainer
