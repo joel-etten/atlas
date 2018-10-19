@@ -34,7 +34,7 @@ export default class App extends React.Component {
   };
 
   render() {
-   if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
+    if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
       return (
         <AppLoading
           startAsync={this._loadResourcesAsync}
@@ -42,7 +42,7 @@ export default class App extends React.Component {
           onFinish={this._handleFinishLoading}
         />
       );
-    } 
+    }
 
     return (
       <Provider>

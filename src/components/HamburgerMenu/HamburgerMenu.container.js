@@ -1,3 +1,3 @@
-import HamburgerMenu from './Hamburger.component'
+import HamburgerMenu from './HamburgerMenu.component'
 
 export default HamburgerMenu
