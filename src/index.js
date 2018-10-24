@@ -1,6 +1,7 @@
 import React from 'react';
-import {Provider} from 'react-redux'
 import {AppLoading, Asset, Font} from 'expo'
+import {Provider} from 'react-redux'
+import store from './config/Store'
 
 import RootContainer from './RootContainer'
 
@@ -19,6 +20,7 @@ export default class App extends React.Component {
     Font.loadAsync({
       /* eslint-disable */ 
       'OpenSans': require('./assets/fonts/OpenSans-Regular.ttf'),
+      'OpenSans-medium': require('./assets/fonts/OpenSans-SemiBold.ttf'),
       /* eslint-enable */
     }),
   ]);
@@ -28,7 +30,6 @@ export default class App extends React.Component {
     // reporting service, for example Sentry
     console.warn(error);
   };
-
   _handleFinishLoading = () => {
     this.setState({isLoadingComplete: true});
   };
@@ -45,7 +46,7 @@ export default class App extends React.Component {
     }
 
     return (
-      <Provider>
+      <Provider store={store}>
         <RootContainer />
       </Provider>
     );
