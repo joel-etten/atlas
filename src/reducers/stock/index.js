@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
-import stock from './stock'
- 
+import list from './list'
+
 export default combineReducers({
-  stock,
+  list,
 })

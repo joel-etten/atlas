@@ -1,4 +1,4 @@
-import menu from '../assets/icons/baseline-menu-24px.svg'
+import menu from '../assets/icons/menu.png'
 
 export default {
   menu,

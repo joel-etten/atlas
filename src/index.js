@@ -14,7 +14,7 @@ export default class App extends React.Component {
   _loadResourcesAsync = async () => Promise.all([
     Asset.loadAsync([
       /* eslint-disable global-require */
-      require('./assets/icons/baseline-menu-24px.svg'),
+      require('./assets/icons/menu.png'),
     ]),
 
     Font.loadAsync({

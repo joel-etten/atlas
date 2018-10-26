@@ -4,12 +4,13 @@ import {Image} from 'react-native'
 import Icons from '../../constants/Icons'
 
 const Icon = ({
-  icon, ...props
+  icon, size, ...props
 }) => (
   <Image
     {...props}
     source={Icons[icon]}
     fadeDuration={0}
+    style={{height: size, width: size}}
   />
 )
 

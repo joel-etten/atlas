@@ -5,9 +5,10 @@
  * @Last Modified time: 2018-10-20 00:15:47
  */
 import React from 'react'
-import {StyleSheet, View} from 'react-native'
+import {StyleSheet, View, StatusBar} from 'react-native'
 
 import StockList from './components/StockList/StockList.container'
+import Header from './components/Header/Header.container'
 
 const mockData = {
   stocks: [
@@ -40,6 +41,8 @@ const mockData = {
 
 const RootContainer = () => (
   <View style={styles.root}>
+    <StatusBar barStyle='dark-content' />
+    <Header />
     <StockList stocks={mockData.stocks} />
   </View>
 )

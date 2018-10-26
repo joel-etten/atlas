@@ -5,22 +5,27 @@
  * @Last Modified time: 2018-10-20 00:02:38
  */
 import React from 'react'
-import {View, Text, StyleSheet} from 'react-native'
-import {deepBlue} from '../../constants/Colors'
+import {View, StyleSheet} from 'react-native'
+
+import IconButton from '../IconButton/IconButton'
+import BalanceSummary from '../BalanceSummary/BalanceSummary.container'
+
+import Colors from '../../constants/Colors'
 
 const Header = () => (
-  <View
-    style={styles.root}
-  >
-    <Text style={styles.text}>Header</Text>
+  <View style={styles.root}>
+    <IconButton icon='menu' size={40} />
+    <BalanceSummary />
   </View>
 )
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor: deepBlue,
-    height: 100,
-    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: Colors.deepBlue,
+    paddingLeft: 20,
+    paddingRight: 20,
   },
 })
 
