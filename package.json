@@ -1,5 +1,5 @@
 {
-  "name": "stockapp",
+  "name": "atlas",
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {

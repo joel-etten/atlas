@@ -10,10 +10,12 @@ export default {
   navigationOptions: ({navigation}) => ({
     headerLeft: <IconButton icon='menu' onPress={navigation.openDrawer} size={normalize(30)} />,
     headerTitle: <BalanceSummary />,
-    headerRight: <IconButton icon='add' size={normalize(20)} />,
+    headerRight: <IconButton icon='add' size={normalize(20)} onPress={() => navigation.navigate('AddStock')} />,
     headerStyle: {
       backgroundColor: Colors.deepBlue,
       borderBottomWidth: 0,
+      marginBottom: normalize(10),
+      marginTop: normalize(10),
     },
     headerLeftContainerStyle: {
       marginLeft: normalize(20),

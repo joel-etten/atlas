@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Stockapp",
-    "description": "Mymoxy events.",
-    "slug": "mymoxy",
+    "name": "Atlas",
+    "description": "Stock Management App",
+    "slug": "atlas",
     "privacy": "unlisted",
     "sdkVersion": "29.0.0",
     "platforms": [

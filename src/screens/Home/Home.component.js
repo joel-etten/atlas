@@ -20,7 +20,7 @@ const Home = ({stocks}) => (
 
 const styles = StyleSheet.create({
   stockContainerStyle: {
-    marginTop: Layout.window.height * 0.4,
+    marginTop: Layout.window.height * 0.35,
   },
   root: {
     flex: 1,
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -90,
     right: 0,
-    bottom: (Platform.OS === 'ios' ? '60%' : '50%'),
+    bottom: (Platform.OS === 'ios' ? '65%' : '55%'),
     left: 0,
   },
 })
