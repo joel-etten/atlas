@@ -1,4 +1,4 @@
-export const calculateBalance = (stocks) => {
+export const calculateBalance = (stocks = []) => {
   let balance = 0
   stocks.forEach((stock) => {
     balance += stock.currentPrice * stock.amount

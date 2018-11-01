@@ -1,4 +1,5 @@
 import React from 'react';
+import {StatusBar, Platform} from 'react-native'
 import {AppLoading, Asset, Font} from 'expo'
 import {Provider} from 'react-redux'
 import store from './config/Store'
@@ -47,7 +48,10 @@ export default class App extends React.Component {
 
     return (
       <Provider store={store}>
-        <RootContainer />
+        <React.Fragment>
+          {Platform.OS === 'ios' && <StatusBar barStyle='light-content' />}
+          <RootContainer />
+        </React.Fragment>
       </Provider>
     );
     

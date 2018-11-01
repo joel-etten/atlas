@@ -25,6 +25,22 @@ const INITIAL_STATE = [
     percentageChange: 2.4,
     type: 'negative',
   },
+  {
+    name: 'Tesla Inc 3',
+    shortName: 'TSLA',
+    amount: 2,
+    currentPrice: 56.8,
+    percentageChange: 2.4,
+    type: 'negative',
+  },
+  {
+    name: 'Tesla Inc 4',
+    shortName: 'TSLA',
+    amount: 2,
+    currentPrice: 56.8,
+    percentageChange: 2.4,
+    type: 'negative',
+  },
 ]
 
 export default (state = INITIAL_STATE, action) => {

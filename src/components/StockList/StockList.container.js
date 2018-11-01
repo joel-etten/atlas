@@ -1,3 +1,1 @@
-import StockList from './StockList.component'
-
-export default StockList
+export {default} from './StockList.component'
