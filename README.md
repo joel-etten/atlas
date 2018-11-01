@@ -1,4 +1,4 @@
-# stockapp
+# ATLAS
 
 # Installation
 ### Install expo SDK
