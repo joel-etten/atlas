@@ -1,10 +1,14 @@
 import React from 'react'
 import {StyleSheet, View, Text} from 'react-native'
-import Colors from '../../constants/Colors'
-import Typography from '../Typography/Typography'
 
-const StockItem = ({stock}) => (
-  <View style={styles.root}>
+import Typography from '../Typography/Typography'
+import FadeInView from '../FadeInView/FadeInView'
+
+import Colors from '../../constants/Colors'
+
+
+const StockItem = ({stock, delay}) => (
+  <FadeInView style={rootStyles} delay={delay}>
     <View>
       <View style={styles.topContainer}>
         <Typography style={styles.header}>{stock.shortName}</Typography>
@@ -19,31 +23,14 @@ const StockItem = ({stock}) => (
       </Text>
       <Text style={styles.currentPrice}>{stock.currentPrice}</Text>
     </View>
-  </View>
+  </FadeInView>
 )
 
 const styles = StyleSheet.create({
-  root: {
-    height: 100,
-    borderRadius: 10,
-    marginLeft: 25,
-    marginRight: 25,
-    marginTop: 10,
-    marginBottom: 10,
-    backgroundColor: Colors.white,
-    shadowColor: Colors.grey,
-    shadowOpacity: 0.5,
-    shadowRadius: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 20,
-  },
   topContainer: {
     flexDirection: 'row',
     alignItems: 'baseline',
   },
-
   header: {
     fontSize: 40,
   },
@@ -72,5 +59,23 @@ const styles = StyleSheet.create({
     fontFamily: 'OpenSans-medium',
   },
 })
+
+const rootStyles = {
+  height: 100,
+  borderRadius: 10,
+  marginLeft: 25,
+  marginRight: 25,
+  marginTop: 10,
+  marginBottom: 10,
+  backgroundColor: Colors.white,
+  shadowColor: Colors.grey,
+  shadowOpacity: 0.5,
+  shadowRadius: 10,
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  padding: 20,
+}
+
 
 export default StockItem

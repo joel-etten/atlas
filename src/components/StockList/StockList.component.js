@@ -1,19 +1,23 @@
 import React from 'react'
-import {StyleSheet, View} from 'react-native'
+import {View} from 'react-native'
+
 import StockItem from '../StockItem/StockItem.container'
 
+
+let delayCounter = 0
+
 const StockList = ({stocks}) => (
-  <View style={styles.root}>
+  <View>
     {
-      stocks.map((stock) => <StockItem stock={stock} key={stock.name} />)
+      stocks.map((stock) => {
+        delayCounter += 100
+        return (
+          <StockItem stock={stock} key={stock.name} delay={delayCounter} />
+        )
+      })
     }
   </View>
 )
 
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
-})
 
 export default StockList
